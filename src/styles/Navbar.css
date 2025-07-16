@@ -2,17 +2,19 @@
 .navbar {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   background: linear-gradient(90deg, #0F2027, #203A43, #2C5364);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 0px;
+  padding: 0 16px;
   height: 64px;
-  z-index: 1000;
+  z-index: 1500;
   font-family: 'Poppins', sans-serif;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
 
 /* ===== Logo Style ===== */
@@ -35,7 +37,6 @@
   justify-content: center;
   font-family: 'Poppins', sans-serif;
   box-shadow: 0 2px 10px rgba(0, 150, 255, 0.3);
-  margin-left: 1rem;
 }
 
 .logo-text-small {
@@ -59,12 +60,12 @@
 }
 
 .menu-mobile {
-  display: none; /* hidden by default */
+  display: none;
 }
 
 .mobile-menu-icon {
   font-size: 28px;
-  color: #ffffff;
+  color: #ffffff !important;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -72,10 +73,10 @@
   align-items: center;
   justify-content: center;
 }
+
 .anticon svg {
-  color: #fff;
-  margin-right: 4rem;
-  margin-left: 2rem;
+  color: #ffffff;
+  font-size: 28px;
 }
 
 /* Desktop View (>=768px) */
@@ -86,34 +87,36 @@
   }
 
   .menu-mobile {
-    display: none !important; 
+    display: none !important;
   }
 
   .menu-desktop button {
-    color: #ffffff;
+    color: #ffffff !important;
     font-weight: 500;
     font-size: 1rem;
     transition: color 0.3s ease;
+    margin-right: 1.5rem;
   }
 
   .menu-desktop button:hover {
-    color: #3AB0FF;
+    color: #fff;
   }
 
   .menu-desktop .active-nav-item {
     border-bottom: 2px solid #ffffff;
     color: #ffffff !important;
+    border-radius: unset;
   }
 }
 
 /* Mobile + Tablet View (<768px) */
 @media (max-width: 767px) {
   .menu-desktop {
-    display: none !important; /* hide full menu */
+    display: none !important;
   }
 
   .menu-mobile {
-    display: flex !important; /* show hamburger */
+    display: flex !important;
   }
 
   .mobile-menu-icon {
@@ -130,52 +133,46 @@
   }
 }
 
-/* Fix AntD Link Buttons */
-.hero-section .ant-btn-link,
-.navbar .ant-btn-link {
-  color: #ffffff !important;
-  border-radius: unset;
-}
-
-/* ===== Drawer Styles ===== */
-
-:where(.css-dev-only-do-not-override-pjilya).ant-drawer .ant-drawer-title{
-  text-align: center;
-  margin-right: 0.7rem;
-}
-:where(.css-dev-only-do-not-override-pjilya).ant-btn.ant-btn-icon-only .anticon{
-  margin-right: 2rem !important;
-}
-:where(.css-dev-only-do-not-override-pjilya).ant-drawer .ant-drawer-content {
+/* ===== Drawer Overrides ===== */
+.ant-drawer-content {
   background: linear-gradient(195deg, #0F2027, #203A43, #2C5364) !important;
-  height: 100vh !important;
-  display: flex;
-  flex-direction: column;
 }
 
-:where(.css-dev-only-do-not-override-pjilya).ant-drawer .ant-drawer-body {
-  padding: 0 !important;
-  overflow-y: auto;
-  color: #ffffff !important;
-  background: transparent !important;
-}
-
-:where(.css-dev-only-do-not-override-pjilya).ant-drawer .ant-drawer-header {
-  background: transparent !important;
+.ant-drawer-header {
+  background-color: transparent !important;
   border-bottom: 1px solid #ffffff !important;
+  color: #ffffff;
 }
 
-:where(.css-dev-only-do-not-override-pjilya).ant-drawer .ant-drawer-close {
+.ant-drawer-title {
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.ant-drawer-close {
   color: #ffffff !important;
-  margin-right: 16px;
+}
+
+.ant-drawer-body {
+  padding: 0 !important;
+  background: transparent !important;
+  overflow-y: auto;
+}
+
+.ant-btn.ant-btn-icon-only .anticon {
+  margin-right: 3rem !important;
 }
 
 /* ===== Drawer Menu Items ===== */
 .custom-menu {
   background: transparent !important;
+  padding: 20px 0;
 }
 
 .custom-menu .ant-menu-item {
+
   color: #ffffff !important;
   font-weight: 500;
   font-size: 1rem;
@@ -191,6 +188,7 @@
 .custom-menu .ant-menu-item-selected {
   color: #ffffff !important;
   background-color: transparent !important;
+  /* border-left: 2px solid #3AB0FF; */
 }
 
 .custom-menu .ant-menu-item:hover {
