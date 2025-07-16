@@ -1,0 +1,21 @@
+.footer-section {
+  background: linear-gradient(135deg, #0F2027, #203A43, #2C5364); 
+  color: #ffffff;
+  padding: 30px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-content p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  color: #b0b0b0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+  .footer-content p {
+    font-size: 0.85rem;
+  }
+}

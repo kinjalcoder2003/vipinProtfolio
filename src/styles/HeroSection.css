@@ -1,0 +1,95 @@
+.hero-section {
+  background: linear-gradient(195deg, #0F2027, #203A43, #2C5364); 
+  color: #ffffff;
+  padding: 100px 20px 80px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  max-width: 850px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.hero-content h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #dddddd;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  color: #bbbbbb;
+}
+
+.highlight {
+  color: #3AB0FF; /* Accent color */
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-buttons .ant-btn-primary {
+  background-color: #3AB0FF;
+  border-color: #3AB0FF;
+  color: #fff;
+}
+
+.hero-buttons .ant-btn-primary:hover {
+  background-color: #0096FF;
+  border-color: #0096FF;
+}
+
+/* ===== Responsive Styling ===== */
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 0px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}

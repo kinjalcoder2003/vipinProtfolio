@@ -1,0 +1,86 @@
+/* ===== Global Reset ===== */
+/* ✅ Prevent horizontal scroll */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+
+/* ===== Scroll Behavior ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== Body Styling ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===== Section Spacing ===== */
+section {
+  padding: 80px 20px;
+}
+
+/* ===== Headings ===== */
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+  color: #222;
+}
+
+/* ===== Links ===== */
+a {
+  text-decoration: none;
+  color: #1890ff;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #40a9ff;
+}
+
+/* ===== Buttons (for Ant Design override if needed) ===== */
+.ant-btn-primary {
+  background-color: #1890ff;
+  border-color: #1890ff;
+}
+
+.ant-btn-primary:hover {
+  background-color: #40a9ff;
+  border-color: #40a9ff;
+}
+
+/* ===== Utility Classes ===== */
+.text-center {
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== Media Queries for Responsiveness ===== */
+@media (max-width: 768px) {
+  section {
+    padding: 60px 16px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+}

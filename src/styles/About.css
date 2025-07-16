@@ -1,0 +1,46 @@
+.about-section {
+  background: linear-gradient(135deg, #0F2027, #203A43, #2C5364); 
+  padding: 80px 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #e0e0e0;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #3AB0FF; /* Accent primary color */
+}
+
+.about-container p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 16px;
+  color: #cccccc; /* Light muted text */
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .about-container h2 {
+    font-size: 2rem;
+  }
+
+  .about-container p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container h2 {
+    font-size: 1.7rem;
+  }
+
+  .about-container p {
+    font-size: 0.95rem;
+  }
+}
